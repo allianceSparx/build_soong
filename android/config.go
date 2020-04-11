@@ -28,7 +28,7 @@ import (
 	"github.com/google/blueprint/bootstrap"
 	"github.com/google/blueprint/proptools"
 
-	"carbon/soong/android"
+	"tipsy/soong/android"
 )
 
 var Bool = proptools.Bool
@@ -489,11 +489,11 @@ func (c *config) ProductResourceOverlays() []string {
 }
 
 func (c *config) JavaSourceOverlays() string {
-	return String(c.productVariables.Carbon.Java_Source_Overlays)
+	return String(c.productVariables.Tipsy.Java_Source_Overlays)
 }
 
 func (c *config) JavaSourceOverlayModuleWhitelist() []string {
-	return android.CarbonConfig.JavaSourceOverlayModuleWhitelist
+	return android.TipsyConfig.JavaSourceOverlayModuleWhitelist
 }
 
 func (c *config) PlatformVersionName() string {
@@ -897,7 +897,7 @@ func (c *deviceConfig) DeviceKernelHeaderDirs() []string {
 }
 
 func (c *deviceConfig) SpecificCameraParametersLibrary() string {
-	return String(c.config.productVariables.Carbon.Specific_camera_parameter_library)
+	return String(c.config.productVariables.Tipsy.Specific_camera_parameter_library)
 }
 
 func (c *deviceConfig) NativeCoverageEnabled() bool {
@@ -1073,13 +1073,13 @@ func (c *deviceConfig) TargetFSConfigGen() []string {
 }
 
 func (c *deviceConfig) QTIAudioPath() string {
-	return String(c.config.productVariables.Carbon.QTIAudioPath)
+	return String(c.config.productVariables.Tipsy.QTIAudioPath)
 }
 
 func (c *deviceConfig) QTIDisplayPath() string {
-	return String(c.config.productVariables.Carbon.QTIDisplayPath)
+	return String(c.config.productVariables.Tipsy.QTIDisplayPath)
 }
 
 func (c *deviceConfig) QTIMediaPath() string {
-	return String(c.config.productVariables.Carbon.QTIMediaPath)
+	return String(c.config.productVariables.Tipsy.QTIMediaPath)
 }
